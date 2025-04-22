@@ -15,7 +15,7 @@ try {
     }
 
     // Query to fetch data with proper ordering (newest first)
-    $sql = "SELECT Review, ReviewDes, ReviewLocation FROM reviews ORDER BY id DESC LIMIT 10";
+    $sql = "SELECT Review, ReviewDes, ReviewLocation FROM reviews ORDER BY ReviewID DESC LIMIT 10";
     $result = $conn->query($sql);
 
     $data = array();
