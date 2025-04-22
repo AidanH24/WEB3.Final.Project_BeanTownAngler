@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BeanTown Angler - Boston's Premier Fishing Guide</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- AOS CSS for animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="homeStyle.css">
+</head>
+
+<body>
+  <!-- Updated Top Navigation Bar -->
+  <nav class="main-navbar fixed-top" id="main-nav">
+    <div class="container">
+      <div class="navbar-container">
+        <a class="navbar-brand" href="../HomePage/home.html">
+          <i class="fas fa-fish"></i> BeanTown Angler
+        </a>
+
+        <button class="navbar-toggler" type="button" id="mobile-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="navbar-links" id="navbarLinks">
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link active" href="../HomePage/home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../GuidePage/guide.html">Guide</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../TipsPage/tips.html">Tips</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../AddReviewsPage/addReviews.html">Add Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../ContactPage/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Add this for spacing -->
+  <div class="nav-spacer"></div>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="container">
+      <!-- Hero Content -->
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+        <h1>Discover Boston's Best Fishing Spots</h1>
+        <p class="tagline">Your complete guide to angling adventures in and around Boston</p>
+        <a href="../GuidePage/guide.html" class="cta-button">Explore Fishing Spots <i
+            class="fas fa-angle-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Introduction Section -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="intro-card" data-aos="fade-up" data-aos-duration="1000">
+            <h2><i class="fas fa-water"></i> Welcome to BeanTown Angler</h2>
+            <p>Whether you're a seasoned angler or just starting out, our site is your ultimate guide to fishing in and
+              around Boston. Discover top-rated fishing spots, get expert tips on gear and bait, and access live maps
+              with real-time water conditions. Our community-driven platform connects you with fellow fishing
+              enthusiasts to share experiences and discover hidden gems across the greater Boston area.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Content Section -->
+  <section class="featured-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">What We Offer</h2>
+
+      <div class="row">
+        <!-- Left Column: Feature List -->
+        <div class="col-lg-6">
+          <ul class="feature-list">
+            <li data-aos="fade-right" data-aos-duration="800">
+              <i class="fas fa-map-marked-alt"></i>
+              <div>
+                <h3>Premium Fishing Spots</h3>
+                <p>Expertly curated and regularly updated locations throughout Boston Harbor, Charles River, and
+                  surrounding lakes.</p>
+              </div>
+            </li>
+            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+              <i class="fas fa-fish"></i>
+              <div>
+                <h3>Seasonal Guides</h3>
+                <p>Know what's biting when with our detailed seasonal fishing calendars and species-specific tips.</p>
+              </div>
+            </li>
+            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+              <i class="fas fa-tachometer-alt"></i>
+              <div>
+                <h3>Live Conditions</h3>
+                <p>Real-time updates on water temperature, clarity, tide schedules, and weather conditions.</p>
+              </div>
+            </li>
+            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+              <i class="fas fa-users"></i>
+              <div>
+                <h3>Angler Community</h3>
+                <p>Share catches, tips, and stories with our vibrant community of Boston-area fishing enthusiasts.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Images -->
+        <div class="col-lg-6">
+          <div class="image-gallery">
+            <div class="image-container" data-aos="fade-left" data-aos-duration="1000">
+              <img
+                src="https://s7d6.scene7.com/is/image/DSGAEMSites/02_MB_Mix_DadDayFishing02_21Out_0371?qlt=95&wid=400&ts=1692039362508&dpr=on,2.625"
+                alt="Boston Harbor fishing" class="gallery-img">
+              <div class="image-caption">Boston Harbor at Sunrise</div>
+            </div>
+            <div class="image-container" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="100">
+              <img
+                src="https://bostonglobe-prod.cdn.arcpublishing.com/resizer/v2/4X5WFMAY2EI6RM7WTA3SE2RNIY.jpg?auth=f5406765ec693f31d202f055f87c654f86f02d385ce8ceccab16dd05a8438952&width=1440"
+                alt="Charles River fishing spot" class="gallery-img">
+              <div class="image-caption">Striped Bass on the Charles</div>
+            </div>
+            <div class="image-container" data-aos="fade-left" data-aos-duration="1400" data-aos-delay="200">
+              <img src="https://patch.com/img/cdn/users/92687/2011/04/raw/e6db982fc53c64ac16efe236676b0ba.jpg"
+                alt="Freshwater fishing near Boston" class="gallery-img">
+              <div class="image-caption">Jamaica Pond Trout Fishing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Cast Your Line?</h2>
+        <p>Explore our interactive map to find the perfect fishing spot based on your preferences</p>
+        <a href="../GuidePage/guide.html" class="cta-button">View Fishing Maps <i class="fas fa-map"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fish Species Highlight -->
+  <section class="species-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Boston's Popular Catches</h2>
+
+      <div class="species-cards">
+        <div class="species-card" data-aos="flip-left" data-aos-duration="1000">
+          <div class="species-icon"><i class="fas fa-fish"></i></div>
+          <h3>Striped Bass</h3>
+          <p>Prime Season: May-October</p>
+        </div>
+        <div class="species-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
+          <div class="species-icon"><i class="fas fa-fish"></i></div>
+          <h3>Bluefish</h3>
+          <p>Prime Season: July-September</p>
+        </div>
+        <div class="species-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="species-icon"><i class="fas fa-fish"></i></div>
+          <h3>Flounder</h3>
+          <p>Prime Season: April-June</p>
+        </div>
+        <div class="species-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
+          <div class="species-icon"><i class="fas fa-fish"></i></div>
+          <h3>Black Sea Bass</h3>
+          <p>Prime Season: June-August</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Tips Section -->
+  <section class="tips-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+          <div class="tips-content">
+            <h2>Latest Fishing Tips</h2>
+            <p>Our expert anglers share their knowledge to help you improve your catch rate in Boston waters</p>
+            <ul class="tips-list">
+              <li><i class="fas fa-check-circle"></i> Use sand worms for stripers around harbor structures</li>
+              <li><i class="fas fa-check-circle"></i> Try diamond jigs for bluefish in early mornings</li>
+              <li><i class="fas fa-check-circle"></i> Watch tide charts for flounder fishing success</li>
+            </ul>
+            <a href="../TipsPage/tips.html" class="secondary-button">View All Tips</a>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200">
+          <div class="tips-image-container">
+            <img
+              src="https://bdc2020.o0bc.com/wp-content/uploads/2023/06/reel-deal-fishing-charters-captain-bobby-rice-1-6488c295ee24c-768x432.jpeg"
+              alt="Fishing tips preview" class="tips-image">
+            <!-- You'll need to add this image to your project -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h3>BeanTown Angler</h3>
+          <p>Your complete guide to fishing in Boston and surrounding areas.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="../HomePage/home.html">Home</a></li>
+            <li><a href="../GuidePage/guide.html">Fishing Guide</a></li>
+            <li><a href="../TipsPage/tips.html">Tips & Techniques</a></li>
+            <li><a href="../AddReviewsPage/addReviews.html">Fishing Locations</a></li>
+            <li><a href="../ContactPage/contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 BeanTown Angler. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Scripts -->
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Custom Scripts -->
+  <script>
+    // Initialize AOS animations
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: false,
+      offset: 100
+    });
+
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navbarLinks = document.getElementById('navbarLinks');
+
+    mobileToggle.addEventListener('click', function () {
+      navbarLinks.classList.toggle('active');
+
+      // Change icon based on menu state
+      const icon = this.querySelector('i');
+      if (navbarLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Navbar scroll behavior
+    const navbar = document.getElementById('main-nav');
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 30) {
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.remove('navbar-scrolled');
+      }
+    });
+
+    // Add this to update the active link based on current page
+    const currentUrl = window.location.href;
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+      if (currentUrl.includes(link.getAttribute('href'))) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+
+    // Back to top button behavior
+    const backToTopButton = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+
+    backToTopButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+
+</html>

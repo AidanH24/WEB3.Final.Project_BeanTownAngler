@@ -1,0 +1,204 @@
+ /* Set background image for the body */
+ body {
+    font-family: Arial, sans-serif; /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    color: #4bb2a3;
+    font-size: 120px;
+    position: fixed;
+    top: 15px;
+    right: 225px;
+    font-weight: bolder;
+}
+
+.login-container {
+    background-color: #4bb2a3;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+    left: 200px;
+    top: 100px;
+}
+
+/* Center text */
+.login-container h2 {
+    margin-bottom: 22px;
+    color: #ffffff;
+    text-align: left;
+    font-size: 65px;
+    left:150px;
+    position: relative;
+}
+
+/* Style inputs */
+.login-container input {
+    width: 40%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 3px solid #ffffff;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background: transparent;
+    color: #6d6d6d;
+    font-size: 20px;
+    left: 150px;
+    background-color: #fff;
+}
+
+/* Style for error messages */
+.error-message {
+    color: #ff6961;
+    font-size: 14px;
+    margin-top: -6px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+/* Style button */
+.login-container button {
+    width: 40%;
+    padding: 15px;
+    background-color: #f08000;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.login-container button:hover {
+    background-color: #f8aa01;
+}
+
+.vl {
+    border: 3px solid #fff;
+    height: 300px;
+    margin-right: -400px;
+    left: 52%;
+    width: 5px;
+    position: absolute;
+    border-radius: 10px;
+    top: 335px;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 8px;
+}
+
+.hl {
+    border: 3px solid #F08000;
+    width: 1250px;
+    height: 3px;
+    position: absolute;
+    top: 185px;
+    z-index: 999;
+    border-radius: 65px;
+    background-color: #F08000;
+}
+
+.hl_double
+ {
+    border: 3px solid #F08000;
+    border-radius: 65px;
+    width: 1000px;
+    height: 3px;
+    position: absolute;
+    top: 200px;
+    z-index: 999;
+    background-color: #F08000;
+ }
+/* Style for Instagram icon */
+.instagram-link {
+    margin-top: 22px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.instagram-link i {
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+/*Sign Up CSS Below*/
+.signup-container {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
+    align-items: center;
+    color: #ffffff;
+    z-index: 2;
+    position: relative;
+    right: 310px;
+    bottom: 140px;
+    text-align: center;
+}
+
+.signup-container h2 {
+    font-size: 65px;
+    color: #ffffff;
+    position: relative;
+    left: 55px;
+    top: 230px;
+    margin-bottom: 30px; 
+    border-width: 10px; 
+    border-color: #fff;
+    border-style: double;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}   
+
+.signup-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.signup-btn-wrapper button {
+    width: 350px;  
+    position: relative;
+    top: 225px;
+    left: 55px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    color: #F08000;
+    font-size: 40px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 8px;
+    transition: all 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+.signup-btn-wrapper button:hover {
+    transform: scale(1.05); 
+    background-color: #F08000;
+    color: #ffffff;
+}
+
+.signup-link {
+    color: #ff0000;
+    font-weight: bold;
+    text-decoration: none;
+   
+}

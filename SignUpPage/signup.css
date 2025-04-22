@@ -1,0 +1,110 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  body {
+    background-image: url("signup_image.webp");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+  }
+
+  .vr {
+    left: 49.9%;
+    border: 4px solid #F08000;
+    position: fixed;
+    height: 100000px;
+    bottom: 0px;
+    z-index: 909;
+  }
+  
+  .container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #6e6e6e;
+  }
+  
+  .container h2 {
+    margin: 20px 0;
+    padding: 20px;
+    position: absolute;
+    background-color: #4bb2a3;
+    color: #ffffff;
+    font-size: 65px;
+    font-weight: bold;
+    width: 95%;
+    text-align: center;
+    bottom: 600px;
+  }
+  
+  .container p {
+    margin: 20px 0;
+    padding: 16px;
+    color: #686868;
+    font-size: 40px;
+    text-align: left;
+    width: 90%;
+    font-weight: bolder;
+  }
+  
+  .userinput {
+    position: absolute;
+    top: 275px;
+    left: 58%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+    width: 35%;
+
+  }
+  
+  /* Input field styling */
+  .userinput input {
+    width: 100%;
+    border-radius: 30px;
+    border: 2px solid ;
+    padding: 10px;
+    font-size: 30px;
+    text-align: left;
+    border-color: #f08000;
+  }
+  
+  /* Button styling */
+  .userinput button {
+    position: absolute;
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    color: #f08000;
+    font-size: 40px;
+    cursor: pointer;
+    top: 340px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 8px;
+  }
+  
+  .userinput button:hover {
+    background-color: #f08000;
+    color: #ffffff;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
