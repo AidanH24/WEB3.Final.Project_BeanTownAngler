@@ -1,59 +1,66 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the login form
     const loginForm = document.getElementById('loginForm');
-    
-    // Form validation function
+
     function validateLoginForm() {
         let isValid = true;
-        
-        // Clear previous error messages
-        document.querySelectorAll('.error-message').forEach(error => {
-            error.style.display = 'none';
-        });
-        
-        // Validate username
+        document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
+
         const username = document.getElementById('UserName').value.trim();
-        if (username === '') {
-            document.getElementById('usernameError').textContent = 'Please enter your username';
-            document.getElementById('usernameError').style.display = 'block';
+        if (!username) {
+            const uErr = document.getElementById('usernameError');
+            uErr.textContent = 'Please enter your username';
+            uErr.style.display = 'block';
             isValid = false;
         }
-        
-        // Validate password
+
         const password = document.getElementById('Password').value;
-        if (password === '') {
-            document.getElementById('passwordError').textContent = 'Please enter your password';
-            document.getElementById('passwordError').style.display = 'block';
+        if (!password) {
+            const pErr = document.getElementById('passwordError');
+            pErr.textContent = 'Please enter your password';
+            pErr.style.display = 'block';
             isValid = false;
         } else if (password.length < 6) {
-            document.getElementById('passwordError').textContent = 'Password must be at least 6 characters';
-            document.getElementById('passwordError').style.display = 'block';
+            const pErr = document.getElementById('passwordError');
+            pErr.textContent = 'Password must be at least 6 characters';
+            pErr.style.display = 'block';
             isValid = false;
         }
-        
+
         return isValid;
     }
-    
-    // Handle form submission
+
     loginForm.addEventListener('submit', function(event) {
-        // Prevent form submission if validation fails
+        const username = document.getElementById('UserName').value.trim();
+        const password = document.getElementById('Password').value;
+
+        // Hard-coded admin check
+        if (username === 'AnglerAdmin25' && password === 'Admin123') {
+            event.preventDefault();
+            window.location.href = '/WEB3-main/AdminPage/index.html';
+            return;
+        }
+
+        // Otherwise validate and fall back to login.php
         if (!validateLoginForm()) {
             event.preventDefault();
         }
     });
-    
-    // Check for URL parameters to display error messages from PHP
+
+    // Show any PHP-returned errors
     function checkForErrors() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const error = urlParams.get('error');
-        
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get('error');
         if (error) {
-            const loginErrors = document.getElementById('loginErrors');
+            let loginErrors = document.getElementById('loginErrors');
+            if (!loginErrors) {
+                loginErrors = document.createElement('div');
+                loginErrors.id = 'loginErrors';
+                loginErrors.style.color = '#ff6961';
+                loginForm.prepend(loginErrors);
+            }
             loginErrors.textContent = decodeURIComponent(error);
             loginErrors.style.display = 'block';
         }
     }
-    
-    // Run error check on page load
     checkForErrors();
 });
