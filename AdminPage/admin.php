@@ -1,6 +1,7 @@
 <?php
-// Ensure no HTML errors are displayed
-ini_set('display_errors', 0);
+// Ensure detailed errors are displayed during debugging
+// Comment these out in production
+ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // Always set content type to JSON
@@ -27,13 +28,13 @@ try {
     $table = htmlspecialchars($_POST["table"]);
     $searchValue = isset($_POST["search_value"]) ? htmlspecialchars($_POST["search_value"]) : "";
     
-    // Debug info - comment out in production
-    // $response["debug"] = ["table" => $table, "search" => $searchValue];
+    // Debug info - useful during development
+    $response["debug"] = ["table" => $table, "search" => $searchValue];
     
     // Validate table name against whitelist
     $allowedTables = ['reviews', 'user']; // Replace with your actual table names
     if (!in_array($table, $allowedTables)) {
-        throw new Exception("Invalid table selected.");
+        throw new Exception("Invalid table selected: " . $table);
     }
 
     // Connect to database
@@ -45,14 +46,24 @@ try {
 
     // Prepare SQL based on table
     if ($table == 'reviews') {
-        // Search in multiple relevant fields for reviews
-        $sql = "SELECT * FROM reviews WHERE ReviewID LIKE ? OR Title LIKE ? OR Content LIKE ?";
-        $stmt = $conn->prepare($sql);
-        if (!$stmt) {
-            throw new Exception("SQL preparation failed: " . $conn->error);
+        // Check if search value is numeric (likely an ID search)
+        if (is_numeric($searchValue)) {
+            $sql = "SELECT * FROM reviews WHERE ReviewID = ?";
+            $stmt = $conn->prepare($sql);
+            if (!$stmt) {
+                throw new Exception("SQL preparation failed: " . $conn->error);
+            }
+            $stmt->bind_param("i", $searchValue); // Use integer binding for ID
+        } else {
+            // Search in multiple relevant fields for reviews
+            $sql = "SELECT * FROM reviews WHERE Title LIKE ? OR Content LIKE ?";
+            $stmt = $conn->prepare($sql);
+            if (!$stmt) {
+                throw new Exception("SQL preparation failed: " . $conn->error);
+            }
+            $searchParam = "%" . $searchValue . "%";
+            $stmt->bind_param("ss", $searchParam, $searchParam);
         }
-        $searchParam = "%" . $searchValue . "%";
-        $stmt->bind_param("sss", $searchParam, $searchParam, $searchParam);
     } else if ($table == 'user') {
         // Search in multiple relevant fields for users
         $sql = "SELECT * FROM user WHERE UserName LIKE ? OR Email LIKE ?";

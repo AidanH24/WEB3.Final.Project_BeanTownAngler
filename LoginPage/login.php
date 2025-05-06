@@ -15,6 +15,9 @@ if ($conn->connect_error)
     die("Connection failed: " . $conn->connect_error);
 }
 
+// List of admin usernames (you can add more if needed)
+$admin_users = array("admin", "administrator", "superuser");
+
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     $user = trim($_POST["UserName"]);
@@ -35,8 +38,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         {
             $_SESSION["user_id"] = $row["User_ID"];
             $_SESSION["username"] = $row["UserName"];
-
-            header("Location:../HomePage/Home.html");
+            
+            // Check if the username is in our admin list
+            if(in_array(strtolower($user), $admin_users)) {
+                $_SESSION["is_admin"] = true;
+                header("Location:../AdminPage/Admin.html");
+            } else {
+                $_SESSION["is_admin"] = false;
+                header("Location:../HomePage/Home.html");
+            }
             exit();
         } 
         else
